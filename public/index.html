@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Iluminação - Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <!-- Status da conexão Mqtt -->
+    <div id="mqtt-status" class="status-reconectando">MQTT: Desconectado</div>
+   
+    <!-- Cartão do dispositivo -->
+    <h1>Controle de Iluminação</h1>
+
+    <div class="comodo">
+        <h2>Sala</h2>
+        <div id="lampada" class="sala">💡</div>
+        <button onclick="ligar('sala')">Ligar</button>
+        <button onclick="desligar('sala')">Desligar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

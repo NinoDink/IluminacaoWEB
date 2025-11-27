@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.comodo {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.comodo h2 {
+    margin-bottom: 60px;
+    color: #555;
+}
+
+.sala,
+.cozinha {
+    font-size: 60px;
+    margin: 20px 0;
+    transition: transform 0.3 ease, color 0.3 ease;
+    opacity: 0.3;
+}
+
+.ligada {
+    color: #ffeb3b;
+    opacity: 1;
+}
+
+.aguardando {
+    animation: piscar 1s infinite ;
+}
+
+button {
+    background-color: #2196f3;
+    border:  none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#mqtt-status {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.status-desconectado {
+    background-color: red;
+}
+
+.status-reconectando {
+    background-color: orange;
+}
+
+.status-conectado {
+    background-color: green;
+}
+
+@keyframes piscar {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
